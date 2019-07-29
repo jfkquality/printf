@@ -11,13 +11,17 @@ int switch_help(char spec, va_list list)
 	{
 	case 'c':
 		_putchar(va_arg(list, int));
+		break;
 	case 'i':
 	case 'd':
-		_putchar(va_arg(list, int));
+		print_int(va_arg(list, int));
+		break;
 	case 's':
 		_puts(va_arg(list, char *));
+		break;
 	case '%':
 		_putchar(va_arg(list, int));
+		break;
 	/* case 'b': */
 	/* 	printbinary(); */
 	/* case 'u': */
