@@ -14,5 +14,5 @@ char *rot13(char *str);
 char get_spec(char letter);
 int switch_help(char spec, va_list list);
 int _printf(const char *format, ...);
-
+void print_int(int n);
 #endif
