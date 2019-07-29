@@ -1,32 +1,52 @@
 #include <stdio.h>
 #include "holberton.h"
 
-char get_spec(str)
+/**
+ * get_spec - get print specifier
+ * @letter: character to test
+ *
+ * Return: specifier
+ */
+
+char get_spec(char letter)
 {
-	int i;
-	while (str[i])
+	switch (letter)
 	{
-		switch
-		{
-		case 'e':
-			return (str[i]);
-			break;
-		case 's':
-			return (str[i]);
-			break;
-		case '%':
-			return (str[i]);
-			break;
-		case 'i':
-			return (str[i]);
-			break;
-		case 'd':
-			return (str[i]);
-			break;
-		default:
-			return (0);
-		}
-		i++;
+	case 'c':
+		return (letter);
+	case 's':
+		return (letter);
+	case 'd':
+		return (letter);
+	case 'i':
+		return (letter);
+	case '%':
+		return (letter);
+	/* case 'b': */
+	/* 	return (letter); */
+	/* case 'f': */
+	/* 	return (letter); */
+	/* case 'g': */
+	/* 	return (letter); */
+	/* case 'h': */
+	/* 	return (letter); */
+	/* case 'l': */
+	/* 	return (letter); */
+	/* case 'o': */
+	/* 	return (letter); */
+	/* case 'p': */
+	/* 	return (letter); */
+	/* case 'r': */
+	/* 	return (letter); */
+	/* case 'R': */
+	/* 	return (letter); */
+	/* case 'u': */
+	/* 	return (letter); */
+	/* case 'x': */
+	/* 	return (letter); */
+	/* case '0': */
+	/* 	return (letter); */
+	default:
+		return (0);
 	}
-	return (str[i]);
 }
