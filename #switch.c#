@@ -1,0 +1,32 @@
+#include "holberton.h"
+
+/**
+ * switch_help - function that takes specifiers to print coresponding argument
+ *@spec: passed in specifier from get_spec
+ */
+
+int switch_help(char spec, va_list list)
+{
+	switch (spec)
+	{
+	case 'c':
+		_putchar("%c", va_arg(list, int));
+ 	case 'i':
+	case 'd':
+
+	case 's':
+		_puts(list);
+	case '%':
+		_putchar(list);
+	/* case 'b': */
+	/* 	printbinary(); */
+	/* case 'u': */
+	/* 	unsigned decimal; */
+	/* case 'o': */
+	/* 	unsigned octal; */
+	/* case 'x': */
+	/* 	unsigned lower hex; */
+	/* case 'X': */
+	/* 	unsigned upper hex; */
+	}
+}
