@@ -27,8 +27,9 @@ int _printf(const char *format, ...)
 			 /* Send specifier, and arg to print_arg */
 			if (specifier != 0)
 			{
-				printf("specifier is %c", specifier);
-				i++;
+				j += switch_help(specifier, list);
+			}
+			i++;
 		}
 		else
 			_putchar(format[i]);
