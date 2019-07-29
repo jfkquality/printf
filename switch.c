@@ -5,22 +5,19 @@
  *@spec: passed in specifier from get_spec
  */
 
-void *switch_help(char *spec, ...)
+int switch_help(char spec, char *list)
 {
-	va_list argpassed;
-
-	va_start(argpassed, spec);
 	switch (spec)
 	{
 	case 'c':
-		_putchar(va_arg(argpassed, char));
+		_putchar(list);
 	case 'i':
 	case 'd':
-		_puts(va_arg(argpassed, int));
+		_puts(list);
 	case 's':
-		_puts(va_arg(argpassed, char *));
+		_puts(list);
 	case '%':
-		_putchar(va_arg(argpassed, char));
+		_putchar(list);
 	/* case 'b': */
 	/* 	printbinary(); */
 	/* case 'u': */
@@ -32,5 +29,4 @@ void *switch_help(char *spec, ...)
 	/* case 'X': */
 	/* 	unsigned upper hex; */
 	}
-	va_end(argpassed);
 }

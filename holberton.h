@@ -2,6 +2,8 @@
 #define HOLBERTON_H
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
 
 int _isdigit(int c);
 int _strlen(char *);
@@ -12,4 +14,5 @@ char *rot13(char *str);
 char get_spec(char letter);
 int switch_help(char, char *); 
 int _printf(const char *format, ...);
+
 #endif
