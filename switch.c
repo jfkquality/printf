@@ -7,20 +7,17 @@
 
 void *switch_help(char *spec, ...)
 {
-	va_list argpassed;
-
-	va_start(argpassed, spec);
 	switch (spec)
 	{
 	case 'c':
-		_putchar(va_arg(argpassed, char));
+		_putchar(va_arg(char));
 	case 'i':
 	case 'd':
-		_puts(va_arg(argpassed, int));
+		_puts(va_arg(int));
 	case 's':
-		_puts(va_arg(argpassed, char *));
+		_puts(va_arg(char *));
 	case '%':
-		_putchar(va_arg(argpassed, char));
+		_putchar(va_arg(char));
 	/* case 'b': */
 	/* 	printbinary(); */
 	/* case 'u': */
@@ -32,5 +29,4 @@ void *switch_help(char *spec, ...)
 	/* case 'X': */
 	/* 	unsigned upper hex; */
 	}
-	va_end(argpassed);
 }
