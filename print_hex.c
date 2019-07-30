@@ -4,7 +4,7 @@
  * print_hex - print decimal to hex, lower case.
  * @n: decimal number
  *
- * return: count
+ * Return: count i
  */
 int print_hex(unsigned int n)
 {

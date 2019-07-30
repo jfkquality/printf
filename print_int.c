@@ -4,7 +4,7 @@
  * print_int - print integer
  * @n: decimal number
  *
- * return: nothing
+ * Return: counter
  */
 
 int print_int(int n)

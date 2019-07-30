@@ -4,7 +4,7 @@
  * print_bin - print decimal to binary
  * @n: decimal number
  *
- * return: nothing
+ * Return: counter 1
  */
 
 int print_bin(int n)

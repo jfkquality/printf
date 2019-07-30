@@ -7,7 +7,6 @@
  *@list: arguments passed
  * Return: int of string length
  */
-
 int switch_help(char spec, va_list list)
 {
 	int p;
@@ -21,7 +20,6 @@ int switch_help(char spec, va_list list)
 	case 'd':
 		p = print_int(va_arg(list, int));
 		return (p);
-		/* break; */
 	case 's':
 		p = _puts(va_arg(list, char *));
 		return (p);
@@ -32,7 +30,7 @@ int switch_help(char spec, va_list list)
 		print_bin(va_arg(list, int));
 		break;
 	case 'u':
-		print_unsigned(va_arg(list, unsigned int));
+		print_unsign(va_arg(list, unsigned int));
 		break;
 	case 'o':
 		print_oct(va_arg(list, int));

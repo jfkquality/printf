@@ -4,11 +4,12 @@
  * print_HEX - print decimal to hex
  * @n: decimal number
  *
- * return: nothing
+ * Return: counter i
  */
 int print_HEX(unsigned int n)
 {
 	int i = 0;
+
 	if (n != 0)
 	{
 		print_HEX(n / 16);

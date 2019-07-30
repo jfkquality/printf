@@ -4,12 +4,13 @@
  * print_oct - print decimal to octal
  * @n: decimal number
  *
- * return: nothing
+ * Return: count i
  */
 
 int print_oct(unsigned int n)
 {
 	int i = 0;
+
 	if (n != 0)
 	{
 		print_oct(n / 8);
