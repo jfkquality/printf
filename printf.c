@@ -15,7 +15,8 @@ int _printf(const char *format, ...)
 {
 	va_list list;
 	int i = 0;
-	int j = 0;
+	int len = 0;
+	int arg_len = 0;
 	char specifier;
 
 	va_start(list, format);
@@ -27,17 +28,18 @@ int _printf(const char *format, ...)
 			 /* Send specifier, and arg to print_arg */
 			if (specifier != 0)
 			{
-				j += switch_help(specifier, list);
+				arg_len = switch_help(specifier, list);
 			}
 			i++;
 		}
 		else
 			_putchar(format[i]);
 		i++;
+		len++;
 	}
 	if (!format)
 		return (-1);
 
 	va_end(list);
-	return (i + j);
+	return (len + arg_len);
 }
