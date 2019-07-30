@@ -1,1 +1,45 @@
-MAN PAGE default
+.TH _printf "3" "26 July 2019" "0.01" "_printf man page"
+.SH NAME
+.B _printf
+.SH SYNOPSIS
+.B #include "holberton.h"
+
+.B int _printf(const char *\fIformat\fR, ...);
+.SH DESCRIPTION
+The \fB_printf()\fR function produces output according to a \fIformat\fR. The \fB_printf()\fR function writes to the standard output stream.
+.SS Return value
+Upon successful return, the function returns the number of characters printed (excluding the null byte used to end the output to strings).
+
+If an output error occurs, -1 is returned.
+
+.SS Conversion specifiers
+A character that specifies the type of conversion to be applied.
+.TP
+.B c
+A \fIchar\fR, and the resulting character is written.
+
+.TP
+.B s
+A \fIchar *\fR argument is expected to be a pointer to an array of character type (pointer to a string). Characters from the array are written up to (but not including) a terminating null byte.
+
+.TP
+.B %
+A '%' is writen. No argument is converted.
+
+.TP
+.B d, i
+An \fIint\fR argument of signed decimal notation. This gives the minimum number of digits that must appear.
+
+.TP
+.B o, u x, X
+Arugment converted to unsisigned octal(\fBo\fR), unsigned decimal (\fBu\fR), or unsigned hexadecimal (\fBx\fR and \fBX\fR) notation. The letters \fBabcdef\fR are used for \fBx\fR conversion and the letters \fBABCDEF\fR are used for \fBX\fR conversions.
+
+
+.SH BUGS
+It might work, it might not
+.SH EXAMPLE
+e = mc^2
+.SH SEE ALSO
+printf(3)
+.SH AUTHOR
+Mitchell Moscovics, John Knight

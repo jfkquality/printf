@@ -1,0 +1,15 @@
+#include "holberton.h"
+
+/**
+ * print_addr - print void * type.
+ *@str: string
+ * Return: string
+ */
+void print_addr(void *address)
+{
+	int length;
+	for (length = 0 ; address[length] ; ++length)
+	{
+		_putchar(address[length]);
+	}
+}
