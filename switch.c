@@ -10,7 +10,7 @@
 
 int switch_help(char spec, va_list list)
 {
-	/* int p; */
+	int p;
 
 	switch (spec)
 	{
@@ -22,7 +22,8 @@ int switch_help(char spec, va_list list)
 		print_int(va_arg(list, int));
 		break;
 	case 's':
-		_puts(va_arg(list, char *));
+		p = _puts(va_arg(list, char *));
+		return (p);
 		break;
 	case '%':
 		_putchar('%');
