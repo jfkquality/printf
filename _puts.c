@@ -5,12 +5,14 @@
  *@str: string
  * Return: string
  */
-void _puts(char *str)
+int _puts(char *str)
 {
 	int length;
+	int i = 0;
 
 	for (length = 0 ; str[length] != '\0' ; ++length)
 	{
-		_putchar(str[length]);
+		i += _putchar(str[length]);
 	}
+	return (i);
 }

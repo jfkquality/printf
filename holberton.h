@@ -9,7 +9,7 @@
 void print_int(int n);
 int _isdigit(int c);
 int _strlen(char *);
-void _puts(char *w);
+int _puts(char *w);
 void print_rev(char *s);
 int _putchar(char c);
 /* int rot13(char *str); */
