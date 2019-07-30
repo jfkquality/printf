@@ -11,6 +11,7 @@ void print_rev(char *s)
 	{
 		char r[1000];
 		int begin, end, length = 0;
+
 		for (length = 0 ; s[length] != '\0' ; ++length)
 		{
 		}
