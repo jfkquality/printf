@@ -19,8 +19,9 @@ int switch_help(char spec, va_list list)
 		break;
 	case 'i':
 	case 'd':
-		print_int(va_arg(list, int));
-		break;
+		p = print_int(va_arg(list, int));
+		return (p);
+		/* break; */
 	case 's':
 		p = _puts(va_arg(list, char *));
 		return (p);

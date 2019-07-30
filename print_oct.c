@@ -7,11 +7,13 @@
  * return: nothing
  */
 
-void print_oct(unsigned int n)
+int print_oct(unsigned int n)
 {
+	int i = 0;
 	if (n != 0)
 	{
 		print_oct(n / 8);
-		_putchar((n % 8) + '0');
+		i = _putchar((n % 8) + '0');
 	}
+	return (i);
 }
