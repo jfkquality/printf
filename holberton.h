@@ -20,6 +20,6 @@ int print_bin(int n);
 int print_oct(unsigned int n);
 int print_hex(unsigned int n);
 int print_HEX(unsigned int n);
-int print_unsigned(unsigned int);
+int print_unsign(unsigned int);
 int print_addr(void *address);
 #endif
