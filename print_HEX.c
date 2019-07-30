@@ -6,8 +6,9 @@
  *
  * return: nothing
  */
-void print_HEX(unsigned int n)
+int print_HEX(unsigned int n)
 {
+	int i = 0;
 	if (n != 0)
 	{
 		print_HEX(n / 16);
@@ -36,4 +37,6 @@ void print_HEX(unsigned int n)
 			_putchar((n % 16) + '0');
 		}
 	}
+	i++;
+	return (i);
 }
