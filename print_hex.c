@@ -4,10 +4,12 @@
  * print_hex - print decimal to hex, lower case.
  * @n: decimal number
  *
- * return: nothing
+ * return: count
  */
-void print_hex(unsigned int n)
+int print_hex(unsigned int n)
 {
+	int i = 0;
+
 	if (n != 0)
 	{
 		print_hex(n / 16);
@@ -35,5 +37,7 @@ void print_hex(unsigned int n)
 		default:
 			_putchar((n % 16) + '0');
 		}
+		i++;
 	}
+	return (i);
 }

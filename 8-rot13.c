@@ -41,16 +41,14 @@ int rot13(char *str)
 			if (*s1 == *d)
 			{
 				*s1 = *d1;
-				_putchar(*s1);
+				printed += _putchar(*s1);
 				break;
 			}
 			d++;
 			d1++;
-			printed++;
 		}
-		_putchar(*s1);
+		printed += _putchar(*s1);
 		s1++;
-		printed++;
 	}
 	/* _puts(s2); */
 	/* while (s2 < str2) */

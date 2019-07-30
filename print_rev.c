@@ -5,13 +5,17 @@
  *@s: input string
  * Return: maybe
  */
-void print_rev(char *s)
+int print_rev(char *s)
 {
+
+	char r[1000];
+	int begin = 0;
+	int end = 0;
+	int length = 0;
+	int i = 0;
+
 	if (s)
 	{
-		char r[1000];
-		int begin, end, length = 0;
-
 		for (length = 0 ; s[length] != '\0' ; ++length)
 		{
 		}
@@ -20,9 +24,10 @@ void print_rev(char *s)
 		{
 			r[begin] = s[end];
 			end--;
-			_putchar(r[begin]);
+			i += _putchar(r[begin]);
 		}
 	}
 	else
-	  _putchar('0');
+		_putchar('0');
+	return (i);
 }
