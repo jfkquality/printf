@@ -7,11 +7,14 @@
  * return: nothing
  */
 
-void print_unsigned(unsigned int n)
+int print_unsigned(unsigned int n)
 {
+	int i = 0;
+
 	if (n != 0)
 	{
-		print_int(n / 10);
-		_putchar((n % 10) + '0');
+		print_unsigned(n / 10);
+		i += _putchar((n % 10) + '0');
 	}
+	return (i);
 }
