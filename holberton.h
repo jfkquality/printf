@@ -12,7 +12,7 @@ int _strlen(char *);
 void _puts(char *w);
 void print_rev(char *s);
 int _putchar(char c);
-int rot13(char *str);
+/* int rot13(char *str); */
 char get_spec(char);
 int switch_help(char spec, va_list list);
 int _printf(const char *format, ...);
