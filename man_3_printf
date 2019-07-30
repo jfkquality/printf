@@ -1,13 +1,28 @@
-.TH _printf(3) "26 June 2019" "0.01" "_printf man page"
+.TH _printf "3" "26 July 2019" "0.01" "_printf man page"
 .SH NAME
 .B _printf
-- recreation of printf function
 .SH SYNOPSIS
-It Just Works
+.B #include "holberton.h"
+
+.B int _printf(const char *\fIformat\fR, ...);
 .SH DESCRIPTION
-The _printf function acts similarly to the printf function in that it produces  output according to the specified .I format.
-.SH NOTES
-Does the things and the stuffs
+The \fB_printf()\fR function produces output according to a \fIformat\fR. The \fB_printf()\fR function writes to the standard output stream.
+.SS Return value
+Upon successful return, the function returns the number of characters printed (excluding the null byte used to end the output to strings).
+
+If an output error occurs, -1 is returned.
+
+.SS Conversion specifiers
+A character that specifies the type of conversion to be applied.
+
+.B c
+   A \fIchar\fR, and the resulting character is written.
+
+.B s
+   A \fIchar *\fR argument is expected to be a pointer to an array of character type (pointer to a string). Characters from the array are written up to (but not including) a terminating null byte.
+
+.B %
+   A '%' is writen. No argument is converted.
 .SH BUGS
 It might work, it might not
 .SH EXAMPLE
