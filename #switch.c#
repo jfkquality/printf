@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * switch_help - function that takes specifiers to print coresponding argument
@@ -7,26 +8,19 @@
 
 int switch_help(char spec, va_list list)
 {
-	switch (spec)
-	{
-	case 'c':
-		_putchar("%c", va_arg(list, int));
- 	case 'i':
-	case 'd':
 
-	case 's':
-		_puts(list);
-	case '%':
-		_putchar(list);
-	/* case 'b': */
-	/* 	printbinary(); */
-	/* case 'u': */
-	/* 	unsigned decimal; */
-	/* case 'o': */
-	/* 	unsigned octal; */
-	/* case 'x': */
-	/* 	unsigned lower hex; */
-	/* case 'X': */
-	/* 	unsigned upper hex; */
+	char *p;
+
+	));
+		_puts(p);
+		free(p);
+		break;
+	case 'x':
+		print_hex(va_arg(list, int));
+		break;
+	case 'X':
+		print_HEX(va_arg(list, int));
+		break;
 	}
+	return (0);
 }

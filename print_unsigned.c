@@ -1,19 +1,14 @@
 #include "holberton.h"
 
 /**
- * print_int - print integer
+ * print_unsigned - print integer
  * @n: decimal number
  *
  * return: nothing
  */
 
-void print_int(int n)
+void print_unsigned(unsigned int n)
 {
-	if (n < 0)
-	{
-		n = n * -1;
-		_putchar('-');
-	}
 	if (n != 0)
 	{
 		print_int(n / 10);
