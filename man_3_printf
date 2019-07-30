@@ -3,42 +3,99 @@
 .B _printf
 .SH SYNOPSIS
 .B #include "holberton.h"
-
 .B int _printf(const char *\fIformat\fR, ...);
 .SH DESCRIPTION
 The \fB_printf()\fR function produces output according to a \fIformat\fR. The \fB_printf()\fR function writes to the standard output stream.
-.SS Return value
-Upon successful return, the function returns the number of characters printed (excluding the null byte used to end the output to strings).
-
-If an output error occurs, -1 is returned.
-
 .SS Conversion specifiers
 A character that specifies the type of conversion to be applied.
 .TP
 .B c
 A \fIchar\fR, and the resulting character is written.
-
 .TP
 .B s
 A \fIchar *\fR argument is expected to be a pointer to an array of character type (pointer to a string). Characters from the array are written up to (but not including) a terminating null byte.
-
 .TP
 .B %
 A '%' is writen. No argument is converted.
-
 .TP
 .B d, i
 An \fIint\fR argument of signed decimal notation. This gives the minimum number of digits that must appear.
-
 .TP
 .B o, u x, X
 Arugment converted to unsisigned octal(\fBo\fR), unsigned decimal (\fBu\fR), or unsigned hexadecimal (\fBx\fR and \fBX\fR) notation. The letters \fBabcdef\fR are used for \fBx\fR conversion and the letters \fBABCDEF\fR are used for \fBX\fR conversions.
+.TP
+.B p
+The \fIvoid *\fR pointer argument is printed in hexadecimal.
+.TP
+.B r
+Similar to conversion argument \fBs\fR. A \fIchar *\fR argument is expected to be a pointer to an array of character type (pointer to a string) but in reverse order.
+.TP
+.B R
+Similar to conversion argument \fBs\fR. A \fIchar *\fR argument is expected to be a pointer to an array of character type (pointer to a string) but alphabetical characters are rotated by 13 characters in the alphabet.
+.SH Return value
+Upon successful return, the function returns the number of characters printed (excluding the null byte used to end the output to strings).
 
-
+If an output error occurs, -1 is returned.
 .SH BUGS
-It might work, it might not
-.SH EXAMPLE
-e = mc^2
+It might work, it might not.
+Probably alot of bugs.
+Still under development.
+.SH EXAMPLES
+To print a character:
+
+   #include "holberton.h"
+   _printf("%c", character);
+
+To print a string:
+
+   #include "holberton.h"
+   _printf("%s", string);
+
+      and
+
+   #include "holberton.h"
+   _printf("string to be printed");
+
+To print a '%':
+
+   #include "holberton.h"
+   _printf("%%");
+
+To print an integer or decimal:
+
+   #include "holberton.h"
+   _printf("%i or %d", integer, decimal);
+
+To print in octal notation:
+
+   #include "holberton.h"
+   _printf("%o", octal);
+
+To print an unsigned integer:
+
+   #include "holberton.h"
+   _printf("%u", unsigned_int);
+
+To print in hexadecimal notation (lowercase and uppercase):
+
+   #include "holberton.h"
+   _printf("%x and %X", lower_hex, upper_hex);
+
+To print a void pointer:
+
+   #include "holberton.h"
+   _printf("%p", pointer);
+
+To print a string in reverse:
+
+   #include "holberton.h"
+   _printf("%r", string);
+
+To print a string with rot13:
+
+   #include "holberton.h"
+   _printf("%R", string);
+
 .SH SEE ALSO
 printf(3)
 .SH AUTHOR
