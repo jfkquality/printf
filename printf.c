@@ -41,6 +41,5 @@ int _printf(const char *format, ...)
 		return (-1);
 
 	va_end(list);
-	arg_len--;
 	return (len + arg_len);
 }

@@ -14,5 +14,6 @@ int _puts(char *str)
 	{
 		i += _putchar(str[length]);
 	}
+	i--; /* get correct count */
 	return (i);
 }
