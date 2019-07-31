@@ -30,10 +30,14 @@ int _printf(const char *format, ...)
 			{
 				arg_len = switch_help(specifier, list);
 			}
+			if (arg_len < 0)
+				return (-1);
 			i++;
 		}
 		else
+		{
 			_putchar(format[i]);
+		}
 		i++;
 		len++;
 	}

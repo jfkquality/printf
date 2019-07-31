@@ -17,27 +17,26 @@ int print_HEX(unsigned int n)
 		switch (n % 16)
 		{
 		case (10):
-			_putchar('A');
+			i += _putchar('A');
 			break;
 		case (11):
-			_putchar('B');
+			i += _putchar('B');
 			break;
 		case (12):
-			_putchar('C');
+			i += _putchar('C');
 			break;
 		case (13):
-			_putchar('D');
+			i += _putchar('D');
 			break;
 		case (14):
-			_putchar('E');
+			i += _putchar('E');
 			break;
 		case (15):
-			_putchar('F');
+			i += _putchar('F');
 			break;
 		default:
-			_putchar((n % 16) + '0');
+			i += _putchar((n % 16) + '0');
 		}
 	}
-	i++;
 	return (i);
 }
