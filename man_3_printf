@@ -6,6 +6,30 @@
 .B int _printf(const char *\fIformat\fR, ...);
 .SH DESCRIPTION
 The \fB_printf()\fR function produces output according to a \fIformat\fR. The \fB_printf()\fR function writes to the standard output stream.
+.SS Format of the format string
+The format string is a character string. The format string is composed of zero or more directives: ordinary characters (not \fB%\fR), which are copied unchanged to the output stream; and conversion specifications each of which results in fetching zero or more subsequent arguments. Conversion specifications are introduced with the \fB%\fR character, and ends with a \fIconversion specifier\fR. In between there may be (in this order) zero or more \fIflags\fR, an optional minimum \fIfield width\fR, optional \fIpercision\fR, and an optional \fIlength modifier\fR.
+.SS Flag characters
+The characer % is followed by zero or more flags:
+.TP
+.B +
+A sign (+ or -) should always be placed before a number preduced by a signed conversion. By default, a sign is used only for negative numbers.
+.TP
+.B ' '
+(a space) A blank should be left before a positive number (or empty string).
+.TP
+.B #
+The value should be converted to an "alternate form". For \fBo\fR conversionsm the first character of the output string is made zero (by prefixing a 0). For \fBx\fR and \fBX\fR conversions, a nonzero result has the sting "0x" or "0X" prepended to it.
+.TP
+.B 0
+The value shoukd be zero padded. The converted value from most cenversion specifiers is padded on the left with zeros rather than blanks.
+.SS Length modifier
+Here, "integer conversion" stands for \fBd\fR, \dBi\fR, \fBo\fR, \fBu\fR, \fBx\fR, or \fBX\fR conversion.
+.TP
+.B l
+A following integer conversion corresponds to a \fIlong int\fR or \fIunsigned long int\fR argument, or a following \fBn\fR conversion corresponds to a pointer to a \fIlong int\fR argument.
+.TP
+.B h
+A following integer conversion corresponds to a \fIshort int\fR or \fIunsigned short int\fR argument, or a following \fBn\fR conversion corresponds to a pointer to a \fIshort int\fR argument.
 .SS Conversion specifiers
 A character that specifies the type of conversion to be applied.
 .TP
@@ -51,7 +75,7 @@ To print a string:
    #include "holberton.h"
    _printf("%s", string);
 
-      and
+and
 
    #include "holberton.h"
    _printf("string to be printed");
