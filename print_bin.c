@@ -16,6 +16,6 @@ int print_bin(unsigned int n)
 		print_bin(n / 2);
 		i += _putchar((n % 2) + '0');
 	}
-	i--;
+	/* i--; */
 	return (i);
 }

@@ -15,38 +15,39 @@ int switch_help(char spec, va_list list)
 	{
 	case 'c':
 		p = _putchar(va_arg(list, int));
-		return (p);
+		break;
 	case 'i':
 	case 'd':
 		p = print_int(va_arg(list, int));
-		return (p);
+		break;
 	case 's':
 		p = _puts(va_arg(list, char *));
-		return (p);
+		break;
 	case '%':
 		p = _putchar('%');
-		return (p);
+		break;
 	case 'b':
 		p = print_bin(va_arg(list, int));
-		return (p);
+		break;
 	case 'u':
 		p = print_unsign(va_arg(list, unsigned int));
-		return (p);
+		break;
 	case 'o':
 		p = print_oct(va_arg(list, unsigned int));
-		return (p);
+		break;
 	case 'r':
 		p = print_rev(va_arg(list, char *));
-		return (p);
+		break;
 	case 'R':
 		p = rot13(va_arg(list, char *));
-		return (p);
+		break;
 	case 'x':
+	case 'p':
 		p = print_hex(va_arg(list, unsigned int));
-		return (p);
+		break;
 	case 'X':
 		p = print_HEX(va_arg(list, unsigned int));
-		return (p);
+		break;
 	}
-	return (0);
+	return (p);
 }
