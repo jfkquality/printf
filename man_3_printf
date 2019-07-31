@@ -22,6 +22,9 @@ The value should be converted to an "alternate form". For \fBo\fR conversionsm t
 .TP
 .B 0
 The value shoukd be zero padded. The converted value from most cenversion specifiers is padded on the left with zeros rather than blanks.
+.TP
+.B -
+The converted value is to be left adjested on the field bondary. The converted value is padded on the right with blanks, rather than on the left with blanks and zeros.
 .SS Length modifier
 Here, "integer conversion" stands for \fBd\fR, \dBi\fR, \fBo\fR, \fBu\fR, \fBx\fR, or \fBX\fR conversion.
 .TP
