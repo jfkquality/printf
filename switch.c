@@ -16,8 +16,7 @@ int switch_help(char spec, va_list list)
 	case 'c':
 		p = _putchar(va_arg(list, int));
 		break;
-	case 'i':
-	case 'd':
+	case 'i': case 'd':
 		p = print_int(va_arg(list, int));
 		break;
 	case 's':
@@ -41,8 +40,7 @@ int switch_help(char spec, va_list list)
 	case 'R':
 		p = rot13(va_arg(list, char *));
 		break;
-	case 'x':
-	case 'p':
+	case 'x': case 'p':
 		p = print_hex(va_arg(list, unsigned int));
 		break;
 	case 'X':
