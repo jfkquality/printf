@@ -25,6 +25,10 @@ The value shoukd be zero padded. The converted value from most cenversion specif
 .TP
 .B -
 The converted value is to be left adjested on the field bondary. The converted value is padded on the right with blanks, rather than on the left with blanks and zeros.
+.SS Field width
+An optional decimal digit string (with nonzero first digit) specifying a minimum field width. If the converted value has fewer characters than the field width, it will be padded with spaces on the left (or right, if the left-adjustment flag has been given).
+.SS Percision
+An optional precision, in the form of a period ('.') followed by an optional decimal digit string.
 .SS Length modifier
 Here, "integer conversion" stands for \fBd\fR, \dBi\fR, \fBo\fR, \fBu\fR, \fBx\fR, or \fBX\fR conversion.
 .TP
