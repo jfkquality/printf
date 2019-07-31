@@ -21,5 +21,6 @@ int print_int(int n)
 		print_int(n / 10);
 		i += _putchar((n % 10) + '0');
 	}
+	i--;
 	return (i);
 }

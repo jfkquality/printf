@@ -5,11 +5,14 @@
  *@str: string
  * Return: string
  */
-void print_addr(void *address)
+int print_addr(void *address)
 {
+	int i = 0;
 	int length;
 	for (length = 0 ; address[length] ; ++length)
 	{
-		_putchar(address[length]);
+		i += _putchar(address[length]);
 	}
+	i--;
+	return (i);
 }

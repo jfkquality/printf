@@ -18,26 +18,32 @@ int print_hex(unsigned int n)
 		{
 		case (10):
 			_putchar('a');
+			i++;
 			break;
 		case (11):
 			_putchar('b');
+			i++;
 			break;
 		case (12):
 			_putchar('c');
+			i++;
 			break;
 		case (13):
 			_putchar('d');
+			i++;
 			break;
 		case (14):
 			_putchar('e');
+			i++;
 			break;
 		case (15):
 			_putchar('f');
+			i++;
 			break;
 		default:
 			_putchar((n % 16) + '0');
+			i++;
 		}
-		i++;
 	}
 	return (i);
 }

@@ -9,13 +9,13 @@
  */
 int switch_help(char spec, va_list list)
 {
-	int p;
+	int p = 0;
 
 	switch (spec)
 	{
 	case 'c':
-		_putchar(va_arg(list, int));
-		break;
+		p = _putchar(va_arg(list, int));
+		return (p);
 	case 'i':
 	case 'd':
 		p = print_int(va_arg(list, int));
@@ -24,29 +24,29 @@ int switch_help(char spec, va_list list)
 		p = _puts(va_arg(list, char *));
 		return (p);
 	case '%':
-		_putchar('%');
-		break;
+		p = _putchar('%');
+		return (p);
 	case 'b':
-		print_bin(va_arg(list, int));
-		break;
+		p = print_bin(va_arg(list, int));
+		return (p);
 	case 'u':
-		print_unsign(va_arg(list, unsigned int));
-		break;
+		p = print_unsign(va_arg(list, unsigned int));
+		return (p);
 	case 'o':
-		print_oct(va_arg(list, int));
-		break;
+		p = print_oct(va_arg(list, unsigned int));
+		return (p);
 	case 'r':
-		print_rev(va_arg(list, char *));
-		break;
-	/* case 'R': */
-	/* p = rot13(va_arg(list, int)); */
-	/* break; */
+		p = print_rev(va_arg(list, char *));
+		return (p);
+	case 'R':
+		p = rot13(va_arg(list, char *));
+		return (p);
 	case 'x':
-		print_hex(va_arg(list, int));
-		break;
+		p = print_hex(va_arg(list, unsigned int));
+		return (p);
 	case 'X':
-		print_HEX(va_arg(list, int));
-		break;
+		p = print_HEX(va_arg(list, unsigned int));
+		return (p);
 	}
 	return (0);
 }

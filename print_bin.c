@@ -7,7 +7,7 @@
  * Return: counter 1
  */
 
-int print_bin(int n)
+int print_bin(unsigned int n)
 {
 	int i = 0;
 
@@ -16,5 +16,6 @@ int print_bin(int n)
 		print_bin(n / 2);
 		i += _putchar((n % 2) + '0');
 	}
+	i--;
 	return (i);
 }

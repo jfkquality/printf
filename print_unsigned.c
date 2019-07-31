@@ -16,5 +16,6 @@ int print_unsign(unsigned int n)
 		print_unsign(n / 10);
 		i += _putchar((n % 10) + '0');
 	}
+	i--;
 	return (i);
 }
