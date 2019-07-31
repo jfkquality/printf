@@ -14,7 +14,7 @@ int print_oct(unsigned int n)
 	if (n != 0)
 	{
 		print_oct(n / 8);
-		i = _putchar((n % 8) + '0');
+		i += _putchar((n % 8) + '0');
 	}
 	i--;
 	return (i);

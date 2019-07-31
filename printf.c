@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 			 /* Send specifier, and arg to print_arg */
 			if (specifier != 0)
 			{
-				arg_len = switch_help(specifier, list);
+				arg_len += switch_help(specifier, list);
 			}
 			if (arg_len < 0)
 				return (-1);

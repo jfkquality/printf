@@ -21,5 +21,5 @@ int print_oct(unsigned int n);
 int print_hex(unsigned int n);
 int print_HEX(unsigned int n);
 int print_unsign(unsigned int);
-int print_addr(void *address);
+unsigned long int print_addr(unsigned long int);
 #endif
