@@ -3,40 +3,42 @@
 /**
  * print_HEX - print decimal to hex
  * @n: decimal number
+ * @len: length
  *
  * Return: counter i
  */
-int print_HEX(unsigned int n)
+int print_HEX(unsigned int n, int len)
 {
-	int i = 0;
+	/* int i = 0; */
 
 	if (n != 0)
 	{
-		print_HEX(n / 16);
+		len++;
+		print_HEX(n / 16, len);
 		/* if (n % 16 > 10) */
 		switch (n % 16)
 		{
 		case (10):
-			i += _putchar('A');
+			_putchar('A');
 			break;
 		case (11):
-			i += _putchar('B');
+			_putchar('B');
 			break;
 		case (12):
-			i += _putchar('C');
+			_putchar('C');
 			break;
 		case (13):
-			i += _putchar('D');
+			_putchar('D');
 			break;
 		case (14):
-			i += _putchar('E');
+		       _putchar('E');
 			break;
 		case (15):
-			i += _putchar('F');
+			_putchar('F');
 			break;
 		default:
-			i += _putchar((n % 16) + '0');
+			_putchar((n % 16) + '0');
 		}
 	}
-	return (i);
+	return (len);
 }

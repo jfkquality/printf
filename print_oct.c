@@ -3,19 +3,20 @@
 /**
  * print_oct - print decimal to octal
  * @n: decimal number
- *
+ * @len: length
  * Return: count i
  */
 
-int print_oct(unsigned int n)
+int print_oct(unsigned int n, int len)
 {
-	int i = 0;
+	/* int i = 0; */
 
 	if (n != 0)
 	{
-		print_oct(n / 8);
-		i += _putchar((n % 8) + '0');
+		len++;
+		print_oct(n / 8, len);
+		_putchar((n % 8) + '0');
 	}
-	i--;
-	return (i);
+	/* i--; */
+	return (len);
 }

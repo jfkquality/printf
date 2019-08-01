@@ -3,19 +3,21 @@
 /**
  * print_unsign - print integer
  * @n: decimal number
+ * @len: length
  *
  * Return: i
  */
 
-int print_unsign(unsigned int n)
+int print_unsign(unsigned int n, int len)
 {
-	int i = 0;
+	/* int i = 0; */
 
 	if (n != 0)
 	{
-		print_unsign(n / 10);
-		i += _putchar((n % 10) + '0');
+		len++;
+		print_unsign(n / 10, len);
+		_putchar((n % 10) + '0');
 	}
-	i--;
-	return (i);
+
+	return (len);
 }

@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdio.h>
 #include <stdarg.h>
 #include <string.h>
 #include <stdlib.h>
@@ -28,7 +27,7 @@ int _printf(const char *format, ...)
 			 /* Send specifier, and arg to print_arg */
 			if (specifier != 0)
 			{
-				arg_len += switch_help(specifier, list);
+				len += switch_help(specifier, list);
 			}
 			if (arg_len < 0)
 				return (-1);
@@ -36,15 +35,16 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			_putchar(format[i]);
+			len += _putchar(format[i]);
 		}
 		i++;
-		len++;
+		/* len++; */
 	}
 	if (!format)
 		return (-1);
 
 	va_end(list);
+	/* printf("this is len %d and this is arg_length %d\n\n", len, arg_len); */
 
-	return (len + arg_len);
+	return (len); /* + arg_len); */
 }
