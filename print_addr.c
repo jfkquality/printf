@@ -3,18 +3,17 @@
 /**
  * print_addr - print memory address in hex, lower case.
  * @n: decimal number
- * @len: length
  *
  * Return: count i
  */
-int print_addr(unsigned long int n, int len)
+int print_addr(unsigned long int n)
 {
-	/* int i = 0; */
+	static int i = 0;
 
 	if (n != 0)
 	{
-	  len++;
-	  print_addr(n / 16, len);
+		i++;
+		print_addr(n / 16);
 		switch (n % 16)
 		{
 		case (10):
@@ -39,5 +38,5 @@ int print_addr(unsigned long int n, int len)
 			_putchar((n % 16) + '0');
 		}
 	}
-	return (len);
+	return (i);
 }

@@ -3,27 +3,27 @@
 /**
  * print_int - print integer
  * @n: decimal number
- *
+ * @len: lenght
  *
  * Return: counter
  */
 
 int print_int(int n)
 {
-	static int i = 0;
+	/* int i = 0; */
 
 	if (n < 0)
 	{
 		n = n * -1;
 		_putchar('-');
-		/* i++; */
+		len++;
 	}
 	if (n != 0)
 	{
-		i++;
-		print_int(n / 10);
+		len++;
+		print_int(n / 10, len);
 		_putchar((n % 10) + '0');
 	}
 
-	return (i);
+	return (len);
 }

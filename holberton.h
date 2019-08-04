@@ -15,11 +15,11 @@ int rot13(char *str);
 char get_spec(char);
 int switch_help(char spec, va_list list);
 int _printf(const char *format, ...);
-int print_int(int n, int);
-int print_bin(unsigned int n, int);
-int print_oct(unsigned int n, int);
-int print_hex(unsigned int n, int);
-int print_HEX(unsigned int n, int);
-int print_unsign(unsigned int, int);
-int print_addr(unsigned long int, int);
+int print_int(int n);
+int print_bin(unsigned int n);
+int print_oct(unsigned int n);
+int print_hex(unsigned int n);
+int print_HEX(unsigned int n);
+int print_unsign(unsigned int);
+int print_addr(unsigned long int);
 #endif

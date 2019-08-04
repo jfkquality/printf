@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
  * switch_help - function that takes specifiers to print coresponding argument
@@ -9,47 +8,54 @@
  */
 int switch_help(char spec, va_list list)
 {
-	int p = 0;
+	/* int p = 0; */
 	int c = 0;
 
 	switch (spec)
 	{
 	case 'c':
-		c += _putchar(va_arg(list, int));
+		c = _putchar(va_arg(list, int));
 		break;
-	case 'i': case 'd':
-		c = print_int(va_arg(list, int), p);
+	case 'i':
+		c = print_int(va_arg(list, int));
+		/* printf("\nc from int/dec %i, %d\n", c, c); */
+		break;
+	case 'd':
+		c = print_int(va_arg(list, int));
+		/* printf("\nc from dec %d\n", c); */
 		break;
 	case 's':
-		c += _puts(va_arg(list, char *));
+		c = _puts(va_arg(list, char *));
+		/* printf("\nc from %%s %d\n", c); */
 		break;
 	case '%':
-		c += _putchar('%');
+		c = _putchar('%');
 		break;
 	case 'b':
-		c += print_bin(va_arg(list, int), p);
+		c = print_bin(va_arg(list, int));
+		/* printf("\nc from bin %d\n", c); */
 		break;
 	case 'u':
-		c += print_unsign(va_arg(list, unsigned int), p);
+		c = print_unsign(va_arg(list, unsigned int));
 		break;
 	case 'o':
-		c += print_oct(va_arg(list, unsigned int), p);
+		c = print_oct(va_arg(list, unsigned int));
 		break;
 	case 'r':
-		c += print_rev(va_arg(list, char *));
+		c = print_rev(va_arg(list, char *));
 		break;
 	case 'R':
 		c += rot13(va_arg(list, char *));
 		break;
 	case 'p':
-		c += _puts("0x");
-		c += print_addr(va_arg(list, unsigned long int), p);
+		c = _puts("0x");
+		c += print_addr(va_arg(list, unsigned long int));
 		break;
 	case 'x':
-		c += print_hex(va_arg(list, unsigned int), p);
+		c += print_hex(va_arg(list, unsigned int));
 		break;
 	case 'X':
-		c += print_HEX(va_arg(list, unsigned int), p);
+		c += print_HEX(va_arg(list, unsigned int));
 		break;
 	}
 	return (c);

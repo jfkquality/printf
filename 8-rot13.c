@@ -44,6 +44,6 @@ int rot13(char *str)
 			printed += _putchar(*s1);
 		s1++;
 	}
-	printed--;
+	/* printed--; */
 	return (printed);
 }

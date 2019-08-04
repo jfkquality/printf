@@ -29,6 +29,6 @@ int print_rev(char *s)
 	}
 	else
 		_putchar('0');
-	i--;
+	/* i--; */
 	return (i);
 }

@@ -3,18 +3,17 @@
 /**
  * print_hex - print decimal to hex, lower case.
  * @n: decimal number
- * @len: length
  *
  * Return: count i
  */
-int print_hex(unsigned int n, int len)
+int print_hex(unsigned int n)
 {
-	/* int i = 0; */
+	static int i = 0;
 
 	if (n != 0)
 	{
-	  len++;
-	  print_hex(n / 16, len);
+		i++;
+		print_hex(n / 16);
 		/* if (n % 16 > 10) */
 		switch (n % 16)
 		{
@@ -40,5 +39,5 @@ int print_hex(unsigned int n, int len)
 			_putchar((n % 16) + '0');
 		}
 	}
-	return (len);
+	return (i);
 }
