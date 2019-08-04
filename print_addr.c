@@ -8,7 +8,7 @@
  */
 int print_addr(unsigned long int n)
 {
-	static int;
+	static int i;
 
 	if (n != 0)
 	{
