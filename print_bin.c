@@ -10,7 +10,7 @@
 
 int print_bin(unsigned int n)/* , int len) */
 {
-	static int i = 0;
+	static int;
 
 	if (n != 0)
 	{

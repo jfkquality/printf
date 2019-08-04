@@ -8,7 +8,6 @@
  */
 int switch_help(char spec, va_list list)
 {
-	/* int p = 0; */
 	int c = 0;
 
 	switch (spec)
@@ -16,24 +15,17 @@ int switch_help(char spec, va_list list)
 	case 'c':
 		c = _putchar(va_arg(list, int));
 		break;
-	case 'i':
+	case 'i': case 'd':
 		c = print_int(va_arg(list, int));
-		/* printf("\nc from int/dec %i, %d\n", c, c); */
-		break;
-	case 'd':
-		c = print_int(va_arg(list, int));
-		/* printf("\nc from dec %d\n", c); */
 		break;
 	case 's':
 		c = _puts(va_arg(list, char *));
-		/* printf("\nc from %%s %d\n", c); */
 		break;
 	case '%':
 		c = _putchar('%');
 		break;
 	case 'b':
 		c = print_bin(va_arg(list, int));
-		/* printf("\nc from bin %d\n", c); */
 		break;
 	case 'u':
 		c = print_unsign(va_arg(list, unsigned int));

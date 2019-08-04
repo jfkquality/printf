@@ -9,7 +9,7 @@
 
 int print_unsign(unsigned int n)
 {
-	static int i = 0;
+	static int i;
 
 	if (n != 0)
 	{

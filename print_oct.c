@@ -9,7 +9,7 @@
 
 int print_oct(unsigned int n)
 {
-	static int i = 0;
+	static int;
 
 	if (n != 0)
 	{
